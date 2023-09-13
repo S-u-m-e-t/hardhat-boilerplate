@@ -25,8 +25,12 @@ async function main() {
   const Token = await ethers.getContractFactory("Token");
   const token = await Token.deploy();
   await token.deployed();
+  //const MyCryptoNFT = await hre.ethers.getContractFactory("MyCryptoNFT");
+  //const myCryptoNFT = await MyCryptoNFT.deploy("MyCryptoNFT", "MCN");
+  //await myCryptoNFT.deployed();
 
   console.log("Token address:", token.address);
+  //console.log("MyCryptoNFT deployed to:", myCryptoNFT.address);
 
   // We also save the contract's artifacts and address in the frontend directory
   saveFrontendFiles(token);
